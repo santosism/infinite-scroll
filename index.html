@@ -7,12 +7,21 @@
     <title>Infinite Scroll</title>
     <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=https://santosism.github.io/">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.5/axios.min.js" integrity="sha512-TjBzDQIDnc6pWyeM1bhMnDxtWH0QpOXMcVooglXrali/Tj7W569/wd4E8EDjk1CwOAOPSJon1VfcEt1BI4xIrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
     <script src="script.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" type="text/javascript"></script>
+    <script src="server.js" defer></script>
 </head>
 
 <body>
-    <h1>Infinite Scroll</h1>
+    <!-- Title -->
+    <h1>Unsplash API - Infinite Scroll</h1>
+    <!-- Loader -->
+    <div class="loader" id="loader" hidden>
+        <img src="loader.svg" alt="Loading">
+    </div>
+    <!-- Image Container -->
+    <div class="image__container" id="image__container">
+    </div>
     
 </body>
 
