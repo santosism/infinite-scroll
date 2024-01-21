@@ -11,10 +11,9 @@ const apiUrl = 'http://localhost:3000/getRandomPhotos';
 
 function imageLoaded() {
     imagesLoaded++;
-    console.log(imagesLoaded);
     if (imagesLoaded === totalImages) {
         ready = true;
-        console.log("ready=", ready);
+        loader.hidden = true; 
     }
 }
 
@@ -28,7 +27,6 @@ function setAttributes(element, attributes) {
 function displayPhotos() {
     imagesLoaded = 0;
     totalImages = photosArray.length;
-    console.log("total images", totalImages);
 
     // Run function for each object in photosArray up to the count
     photosArray.forEach((photo) => {
@@ -63,7 +61,6 @@ async function getPhotos() {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         photosArray = await response.json();
-        console.log(photosArray);
         displayPhotos();
     } catch (err) {
         console.log(err);

@@ -11,7 +11,7 @@ app.get('/getRandomPhotos', async (req, res) => {
         const response = await axios.get('https://api.unsplash.com/photos/random', {
             params: {
                 client_id: process.env.API_KEY,
-                count: 30, // Fetch ten random photos
+                count: 30, // Fetch thirty random photos
             },
         });
 
